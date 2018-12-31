@@ -10,7 +10,7 @@ class App extends Component {
 
         window.navigator.geolocation.getCurrentPosition(
             position => this.setState({latitude: position.coords.latitude}),
-            error => this.setState({errorMessage: error})
+            error => this.setState({errorMessage: error.message})
         )
     }
 
